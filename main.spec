@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['D:\\Documents\\Creativity\\Programs\\Click Faster'],
+             pathex=['D:\\Documents\\Creativity\\Programs\\Minecraft on Crack'],
              binaries=[],
              datas=[],
              hiddenimports=[],
