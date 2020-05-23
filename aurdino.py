@@ -2,10 +2,9 @@ import  time, serial,json
 
 SettingsName = 'Settings.json'
 class aurdino:
-    def __init__(self):
-        with open(SettingsName, 'r') as file:
-            data = json.load(file)
-        self.ser = serial.Serial( "COM" + str(data['com']), 9600, timeout=1)
+    def __init__(self, com="COM3"):
+        self.com = com
+        self.ser = serial.Serial(com, 9600, timeout=1)
 
     def shock(self, duration=1):
         time.sleep(1)                      # wait 2 seconds
