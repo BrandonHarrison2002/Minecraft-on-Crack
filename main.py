@@ -1,5 +1,4 @@
-import aurdino,threading
-
+import threading,aurdino
 from pynput import mouse
 from pynput import keyboard
 

@@ -1,0 +1,9 @@
+# This file is used by pip to install required python packages
+# Usage: py -3.7 -m pip install -r requirements.txt
+
+pynput
+Pillow
+opencv-python
+pywin32
+pyserial
+git+ssh://git@github.com/ShaddyDaddy/Aurdino.git
