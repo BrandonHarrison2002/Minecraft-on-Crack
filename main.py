@@ -1,10 +1,11 @@
-import threading,aurdino
+import threading,Arduino
 from pynput import mouse
 from pynput import keyboard
 
 switch = False
-aurdino = aurdino.aurdino()
+arduino = Arduino.arduino()
 clicks = 0
+timer = None
 
 def on_click( x, y, button, pressed):
     global clicks
@@ -12,11 +13,11 @@ def on_click( x, y, button, pressed):
         clicks = clicks + 1 
 
 def check():
-    global aurdino, switch, timer, clicks
+    global arduino, switch, timer, clicks
     if switch:
         print(clicks)
         if clicks < 6:
-            aurdino.shock()
+            arduino.shock()
         else:
             print("You did good")
         timer = threading.Timer(1.2, check)
@@ -35,7 +36,7 @@ def end(key):
 timer = threading.Timer(1.0, check)
 
 
-aurdino.shock()
+arduino.shock()
 key_listener = keyboard.Listener(on_release=end)
 key_listener.start()
 

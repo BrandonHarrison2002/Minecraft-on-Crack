@@ -6,4 +6,4 @@ Pillow
 opencv-python
 pywin32
 pyserial
-git+ssh://git@github.com/ShaddyDaddy/Aurdino.git
+git+ssh://git@github.com/ShaddyDaddy/Arduino.git
